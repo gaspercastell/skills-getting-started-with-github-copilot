@@ -9,8 +9,11 @@
       "type": "debugpy",
       "request": "launch",
       "module": "uvicorn",
+      "cwd": "${workspaceFolder}",
       "args": [
-        "src.app:app",
+        "app:app",
+        "--app-dir",
+        "src",
         "--reload",
         "--reload-include",
         "src/static/*"
